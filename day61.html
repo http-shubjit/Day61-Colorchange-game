@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Color Change Program</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#colorButton {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#colorBox {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+</style>
+</head>
+<body>
+
+<button id="colorButton">Change Color</button>
+<div id="colorBox"></div>
+
+<script>
+
+const colorBox = document.getElementById("colorBox");
+
+document.getElementById("colorButton").addEventListener("click", function() {
+   
+    const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+    
+   
+    colorBox.style.backgroundColor = randomColor;
+});
+
+</script>
+</body>
+</html>
